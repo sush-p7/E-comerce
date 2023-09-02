@@ -116,6 +116,7 @@
     <%
         Product productDataDao = new Product();
         List<Product> productList = productDataDao.getProducts();
+
     %>
 
     <%

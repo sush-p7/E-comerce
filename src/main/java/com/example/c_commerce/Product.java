@@ -60,6 +60,64 @@ public class Product {
         private String productInfo;
         private double productPrice;
         private double productCrosePrice;
+//        new varibales
+    private String productDescription;
+
+    public String getMaterial() {
+        return Material;
+    }
+
+    public void setMaterial(String material) {
+        Material = material;
+    }
+
+    private String Material;
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
+    }
+
+    public void setShippingDay(String shippingDay) {
+        this.shippingDay = shippingDay;
+    }
+
+    public void setFit(String fit) {
+        this.fit = fit;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    private String availability;
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public String getShippingDay() {
+        return shippingDay;
+    }
+
+    public String getFit() {
+        return fit;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    private String shippingDay;
+    private String fit;
+    private String tag;
+//
 
         public List<Product> getProducts() {
             // Declare a List to contain all the POJOs
@@ -90,7 +148,12 @@ public class Product {
                     product.setProductInfo(rs.getString("Product_Info"));
                     product.setProductPrice(rs.getDouble("Product_Price"));
                     product.setProductCrosePrice(rs.getDouble("Product_crose_Price"));
-
+                    product.setProductDescription(rs.getString("productDescription"));
+                    product.setAvailability(rs.getString("availability"));
+                    product.setFit(rs.getString("Fit"));
+                    product.setTag(rs.getString("Tag"));
+                    product.setShippingDay(rs.getString("ShippingDay"));
+                    product.setMaterial(rs.getString("Material"));
                     // Add the product to the list
                     products.add(product);
                 }
