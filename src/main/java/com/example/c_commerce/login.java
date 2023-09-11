@@ -14,6 +14,9 @@ public class login extends HelloServlet{
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         if (request.getParameter("login")!=null){
+            HttpSession loginSession = request. getSession();
+            loginSession.setAttribute("user",request.getParameter("Email"));
+            loginSession.setAttribute("password",request.getParameter("Password"));
 //            out.println("login");
 //            String Name = request.getParameter("Name");
             response.sendRedirect("home.jsp");
@@ -79,6 +82,9 @@ public class login extends HelloServlet{
 
         }
         if (request.getParameter("siginup")!=null){
+            HttpSession loginSession = request. getSession();
+            loginSession.setAttribute("user",request.getParameter("Email"));
+            loginSession.setAttribute("password",request.getParameter("Password"));
             response.sendRedirect("home.jsp");
 
             out.println("siginup");

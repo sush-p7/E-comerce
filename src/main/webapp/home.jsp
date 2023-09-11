@@ -18,5 +18,8 @@
 <%@include file="producCategory.jsp"%>
 <%@include file="suggestion.jsp"%>
 <%@include file="footer.jsp"%>
+<%! String user;%>
+<% user= (String) session.getAttribute("user");%>
+<%=user%>
 </body>
 </html>

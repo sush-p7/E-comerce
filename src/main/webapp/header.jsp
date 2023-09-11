@@ -21,8 +21,8 @@
         <div class="tabs">
             <a href="home.jsp">Home</a>
             <a href="shop.jsp">Shope</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="AboutUs.jsp">About</a>
+            <a href="ContactUs.jsp">Contact</a>
         </div>
         <div class="options">
             <a href="#"
@@ -34,7 +34,7 @@
             <a href="#"
             ><ion-icon name="heart-outline" class="ionicons"></ion-icon
             ></a>
-            <a href="#"
+            <a href="shoppingCart.jsp"
             ><ion-icon name="cart-outline" class="ionicons"></ion-icon
             ></a>
         </div>

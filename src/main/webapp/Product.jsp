@@ -79,6 +79,28 @@ background: #F9F1E7;">
 <%@include file="producCategory.jsp"%>
 <%@include file="footer.jsp"%>
 <%----%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var id={
+        PId: <%=id%>
+    };
+    $(document).ready(function(){
+        $("#addToCart").click(function(){
+            $.ajax({
+                url: 'addto-cart',
+                type: 'post',
+                data: id,
+                success: function(result) {
+                    alert('Query executed!');
+                },
+                error: function(err) {
+                    // handle error here
+                }
+            });
+        });
+    });
+</script>
+<%--<button id="myButton">Execute Query</button>--%>
 <script>
     console.log(<%=id%>);
     var addToCart = document.getElementById("addToCart");
@@ -86,5 +108,6 @@ background: #F9F1E7;">
         window.location.href = 'CartTab.jsp?id=' + <%=id%>;
     })
 </script>
+
 </body>
 </html>
